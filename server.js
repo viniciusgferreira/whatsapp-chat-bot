@@ -32,7 +32,9 @@ client.on('ready', () => {
     console.log('Client is ready!');
 });
 
-client.on('message', async message => {
+client.on('message_create', handleMessage);
+
+async function handleMessage(message) {
     switch (message.body) {
         case '!menu':
             console.log("incoming message: " + message.body);
@@ -42,7 +44,7 @@ client.on('message', async message => {
             console.log("incoming message: " + message.body);
             if (message.hasMedia) {
                 const media = await message.downloadMedia();
-                media.filename = 'sticker.jpg';
+                media.filename = 'sticker';
                 const mediaPath = './upload/';
                 const fullFilename = mediaPath + media.filename + '.jpg';
                 console.log(fullFilename);
@@ -62,6 +64,6 @@ client.on('message', async message => {
 
             }
     }
-});
+}
 
 client.initialize();
