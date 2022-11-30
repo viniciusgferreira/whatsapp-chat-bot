@@ -45,6 +45,12 @@ async function handleMessage(message) {
             if (message.hasMedia) {
                 const media = await message.downloadMedia();
                 media.filename = 'sticker';
+
+                //CREATE FOLDER UPLOAD
+                if (!fs.existsSync('./upload')) {
+                    fs.mkdirSync('./upload');
+                }
+
                 const mediaPath = './upload/';
                 const fullFilename = mediaPath + media.filename + '.jpg';
                 console.log(fullFilename);
