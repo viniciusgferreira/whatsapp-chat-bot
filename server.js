@@ -2,7 +2,8 @@ const qrcode = require('qrcode-terminal');
 const fs = require('fs');
 const { Client, LocalAuth, MessageMedia } = require('whatsapp-web.js');
 
-// Use the saved values
+// Use the saved values and start client
+console.log('starting server...');
 const client = new Client({
   ffmpegPath: '/usr/bin/ffmpeg',
   authStrategy: new LocalAuth(),
