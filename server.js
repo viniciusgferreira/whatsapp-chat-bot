@@ -31,7 +31,7 @@ async function handleMessage(message) {
       break;
     case '!ping':
       console.log(`incoming message: ${message.body}`);
-      message.reply('Estou trabalhando agora!\n\n Bot Vagabundo - feito por Vinicius G. Ferreira');
+      message.reply('Estou trabalhando agora!\n\nBot Vagabundo');
       break;
     case '!fig':
       console.log(`incoming message: ${message.body}`);
