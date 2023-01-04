@@ -27,7 +27,7 @@ async function handleMessage(message) {
   switch (message.body) {
     case '!menu':
       console.log(`incoming message: ${message.body}`);
-      message.reply('!fig - Envie junto com a foto/video/gif para criar uma figurinha\n\n!menu - Para ver opções disponíveis\n\n Bot Vagabundo - feito por Vinicius G. Ferreira');
+      message.reply('!fig - Envie junto com a foto/video/gif para criar uma figurinha\n\n!menu - Para ver opções disponíveis\n\n!ping - Para confirmar se o bot está online\n\nBot Vagabundo - feito por Vinicius G. Ferreira');
       break;
     case '!ping':
       console.log(`incoming message: ${message.body}`);
